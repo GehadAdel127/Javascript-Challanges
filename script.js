@@ -1,10 +1,10 @@
 // even or odd
 
 // the first way:
-function oddOrEven (number){
-    if(number % 2 === 0){
+function oddOrEven(number) {
+    if (number % 2 === 0) {
         return "Even"
-    }else{
+    } else {
         return "Odd"
     }
 }
@@ -12,7 +12,7 @@ console.log(oddOrEven(5));
 
 
 // the second way:
-function evenOrOdd(number){
+function evenOrOdd(number) {
     return number % 2 === 0 ? "Even" : "Odd"
 }
 console.log(evenOrOdd(8));
@@ -22,23 +22,23 @@ console.log(evenOrOdd(8));
 // get the sum of the positives numbers of the array
 
 // the first way:
-function sumOfPositives(arr){
+function sumOfPositives(arr) {
     let initValue = 0
-    for(let i = 0; i < arr.length; i++){
-        if(arr[i] > 0){
+    for (let i = 0; i < arr.length; i++) {
+        if (arr[i] > 0) {
             initValue += arr[i]
         }
     }
     return initValue
 }
-console.log(sumOfPositives([10,4,-2,6]));
+console.log(sumOfPositives([10, 4, -2, 6]));
 
 
 // the second way:
-function sumPositivesOfArr(arr){
-    return arr.filter((x) => x > 0).reduce(((acc , current) => acc + current) , 0)
+function sumPositivesOfArr(arr) {
+    return arr.filter((x) => x > 0).reduce(((acc, current) => acc + current), 0)
 }
-console.log(sumPositivesOfArr([10,4,-2,2]));
+console.log(sumPositivesOfArr([10, 4, -2, 2]));
 
 // reduce function takes callback function and initial value ,
 // here the initial value was zero The value resulting from the previous call to callbackFn.
@@ -57,24 +57,24 @@ console.log(sumPositivesOfArr([10,4,-2,2]));
 
 // the first way:
 
-function sumWithoutHighAndLow(arr){
-    if(arr == null) return 0
-    return arr.sort((a,b) => a - b).slice(1 , -1).reduce((accu , current) => accu + current , 0)
+function sumWithoutHighAndLow(arr) {
+    if (arr == null) return 0
+    return arr.sort((a, b) => a - b).slice(1, -1).reduce((accu, current) => accu + current, 0)
 }
 
-console.log(sumWithoutHighAndLow([5,7,2,4,1,8,4]));
+console.log(sumWithoutHighAndLow([5, 7, 2, 4, 1, 8, 4]));
 
 
 // the second way:
 
-function sumWithoutHighestandLowest(arr){
-    if(arr == null) return 0
-    let sortedArr = arr.sort((a , b) => a - b)
-    let slicedArr = sortedArr.slice(1 , -1)
-    let newArr = slicedArr.reduce((acc , current) => acc + current , 0)
+function sumWithoutHighestandLowest(arr) {
+    if (arr == null) return 0
+    let sortedArr = arr.sort((a, b) => a - b)
+    let slicedArr = sortedArr.slice(1, -1)
+    let newArr = slicedArr.reduce((acc, current) => acc + current, 0)
     return newArr
 }
-console.log(sumWithoutHighestandLowest([3,9,1,7,4,5]));
+console.log(sumWithoutHighestandLowest([3, 9, 1, 7, 4, 5]));
 
 
 // -------------------------------------------------------------------------------------
@@ -83,21 +83,21 @@ console.log(sumWithoutHighestandLowest([3,9,1,7,4,5]));
 // repeat string
 
 // first way:
-function repeatStr(number , string){
+function repeatStr(number, string) {
     let newStr = ''
-    for(let i = 0; i < number; i++){
+    for (let i = 0; i < number; i++) {
         newStr += string
     }
     return newStr
 }
-console.log(repeatStr(5 , "Gehad"));
+console.log(repeatStr(5, "Gehad"));
 
 
 // the second way:
-function strRepeat(number , string){
+function strRepeat(number, string) {
     return string.repeat(number)
 }
-console.log(strRepeat(5 , "beauty"));
+console.log(strRepeat(5, "beauty"));
 
 
 // --------------------------------------------------------------------------------------
@@ -105,7 +105,7 @@ console.log(strRepeat(5 , "beauty"));
 // covert a random number to a reversed array of this number
 // convert the number to string then split it to be an array to convert it again to number so we can reverse it
 
-function convertRandomNumtoReversedArray(number){
+function convertRandomNumtoReversedArray(number) {
     return number.toString().split('').map((x) => Number(x)).reverse()
 }
 console.log(convertRandomNumtoReversedArray(1272002));
@@ -115,10 +115,10 @@ console.log(convertRandomNumtoReversedArray(1272002));
 
 
 // counting sheep
-function countSheeps(arr){
+function countSheeps(arr) {
     let counter = 0
-    arr.map((x) =>{
-        if(x === true) counter += 1
+    arr.map((x) => {
+        if (x === true) counter += 1
     })
     return counter
 }
@@ -128,7 +128,7 @@ function countSheeps(arr){
 
 // return negative
 
-function returnNegativeNum(num){
+function returnNegativeNum(num) {
     return num > 0 ? -num : num
 }
 
@@ -139,9 +139,9 @@ function returnNegativeNum(num){
 
 
 // first way:
-function findNeedle(hayStack){
-    for (let i = 0; i < hayStack.length; i++){
-        if(hayStack[i] === "needle"){
+function findNeedle(hayStack) {
+    for (let i = 0; i < hayStack.length; i++) {
+        if (hayStack[i] === "needle") {
             return "found the needle at position " + i
         }
     }
@@ -150,7 +150,7 @@ function findNeedle(hayStack){
 
 // second way:
 
-function needle(arr){
+function needle(arr) {
     return "found the needle at position " + arr.indexOf("needle")
 }
 
@@ -161,36 +161,36 @@ function needle(arr){
 
 
 // first way:
-function count(array){
+function count(array) {
     let countOfPositives = 0
     let sumOfNegatives = 0
-    for(let i = 0 ; i < array.length; i++){
-        if(array[i] > 0){
+    for (let i = 0; i < array.length; i++) {
+        if (array[i] > 0) {
             countOfPositives += 1
-        }else{
+        } else {
             sumOfNegatives += array[i]
         }
     }
-    return [countOfPositives , sumOfNegatives]
+    return [countOfPositives, sumOfNegatives]
 }
-console.log(count([1,2,3,4,5,6,7,8,9,10, -1 , -2 , -3]));
+console.log(count([1, 2, 3, 4, 5, 6, 7, 8, 9, 10, -1, -2, -3]));
 
 
 // second way:
-function countAndSum(input){
+function countAndSum(input) {
     let countOfPositives = input.filter((x) => x > 0).length
-    let sumOfNegatives = input.filter((x) => x < 0).reduce((acc , current) => acc + current , 0)
-    return [countOfPositives , sumOfNegatives]
+    let sumOfNegatives = input.filter((x) => x < 0).reduce((acc, current) => acc + current, 0)
+    return [countOfPositives, sumOfNegatives]
 }
 
-console.log(countAndSum([1,2,3,4,5,6,7,8,9,10, -1 , -2 , -3]));
+console.log(countAndSum([1, 2, 3, 4, 5, 6, 7, 8, 9, 10, -1, -2, -3]));
 
 
 // -------------------------------------------------------------------------------------------
 
 
 // double char
-function doubleChar(str){
+function doubleChar(str) {
     return str.split('').map((x) => x.repeat(2)).join('')
 }
 console.log(doubleChar('Gehad'));
@@ -202,21 +202,21 @@ console.log(doubleChar('Gehad'));
 // basic mathematical operations
 
 // first way:
-function mathOperations(opearation , value1 , value2){
+function mathOperations(opearation, value1, value2) {
     return eval(opearation + value1 + value2)
 }
-console.log(mathOperations(5,'*', 6));
+console.log(mathOperations(5, '*', 6));
 
 
 
 // second way:
-function basicMath(operation , val1 , val2){
-    if(operation === "+") return val1 + val2
-    if(operation === "-") return val1 - val2
-    if(operation === "*") return val1 * val2
-    if(operation === "/") return val1 / val2
+function basicMath(operation, val1, val2) {
+    if (operation === "+") return val1 + val2
+    if (operation === "-") return val1 - val2
+    if (operation === "*") return val1 * val2
+    if (operation === "/") return val1 / val2
 }
-console.log(basicMath('/' , 30 , 5));
+console.log(basicMath('/', 30, 5));
 
 // -------------------------------------------------------------------------------------------
 
@@ -225,27 +225,27 @@ console.log(basicMath('/' , 30 , 5));
 
 
 // first way:
-function squareRootOrNOt(arr){
+function squareRootOrNOt(arr) {
     let newArr = []
-    for(let i = 0; i < arr.length; i++){
-        if(Number.isInteger(Math.sqrt(arr[i]))){
+    for (let i = 0; i < arr.length; i++) {
+        if (Number.isInteger(Math.sqrt(arr[i]))) {
             newArr.push(Math.sqrt(arr[i]))
-        }else{
+        } else {
             newArr.push(arr[i] * arr[i])
         }
     }
     return newArr
 }
 
-console.log(squareRootOrNOt([2 , 4 , 6 , 8]));
+console.log(squareRootOrNOt([2, 4, 6, 8]));
 
 
 // second way:
-function square(arr){
+function square(arr) {
     return arr.map((num) => Number.isInteger(Math.sqrt(num)) ? Math.sqrt(num) : num * num)
 }
 
-console.log(square([2,4,6,8]));
+console.log(square([2, 4, 6, 8]));
 
 
 
@@ -257,22 +257,22 @@ console.log(square([2,4,6,8]));
 // Return the results as an array or list ( depending on language ).
 
 
-function countBy (x , n){
+function countBy(x, n) {
     let newArray = []
-    for(let i = 1; i <= needle; i++){
+    for (let i = 1; i <= needle; i++) {
         let newNum = x * i;
         newArray.push(newNum)
     }
     return newArray
 }
 
-console.log(countBy(1 , 10));
+console.log(countBy(1, 10));
 
 
 
 // Remove string spaces
 
-function removeSpaces (str){
+function removeSpaces(str) {
     return str.split(' ').join('')
 }
 
@@ -282,22 +282,22 @@ console.log(removeSpaces('g e ha d'));
 
 // invert values from positive to negative and reverse
 
-function invertValues (array){
+function invertValues(array) {
     let newArr = []
-    for(let i = 0 ; i < array.length; i++){
+    for (let i = 0; i < array.length; i++) {
         newArr.push(array[i] * -1)
     }
     return newArr
 }
 
-console.log(invertValues([1 , 2 , 3]));
+console.log(invertValues([1, 2, 3]));
 
 
 // Convert boolean values to strings 'Yes' or 'No'.
-function boolToWord( bool ){
-    if(bool === true){
+function boolToWord(bool) {
+    if (bool === true) {
         return 'Yes'
-    }else{
+    } else {
         return 'No'
     }
 }
@@ -309,7 +309,7 @@ console.log(boolToWord(true));
 
 // Reversing Words in a String
 
-function reverse(string){
+function reverse(string) {
     return string.split(' ').reverse().join(' ');
 }
 
@@ -327,7 +327,7 @@ console.log(litres(9));
 
 //Highest and Lowest
 
-function highAndLow(numbers){
+function highAndLow(numbers) {
     let arrayNum = numbers.split(' ').map((num) => Number(num))
     let maxNum = Math.max(...arrayNum)
     let minNum = Math.min(...arrayNum)
@@ -335,3 +335,21 @@ function highAndLow(numbers){
 }
 
 console.log(highAndLow('1 2 3 4 5 6'));
+
+// Count the Digit
+function nbDig(n, d) {
+    // your code
+    let result = 0
+    let str = d.toString()
+    for (let i = 0; i <= n; i++) {
+        let square = (i * i).toString()
+        for (let char of square) {
+            if (char === str) {
+                result++
+            }
+        }
+    }
+    return result
+}
+
+console.log(nbDig(10, 1));
