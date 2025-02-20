@@ -357,7 +357,7 @@ console.log(nbDig(10, 1));
 
 //  square digits
 function squareDigits(num){
-    return num.toString().split('').map((n) => Math.pow(n , 2)).join('')
+    return Number(num.toString().split('').map((n) => Math.pow(n , 2)).join(''))
 }
 
 console.log(squareDigits(127));
