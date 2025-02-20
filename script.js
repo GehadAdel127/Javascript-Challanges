@@ -323,3 +323,15 @@ function litres(time) {
 }
 
 console.log(litres(9));
+
+
+//Highest and Lowest
+
+function highAndLow(numbers){
+    let arrayNum = numbers.split(' ').map((num) => Number(num))
+    let maxNum = Math.max(...arrayNum)
+    let minNum = Math.min(...arrayNum)
+    return `${maxNum} ${minNum}`
+}
+
+console.log(highAndLow('1 2 3 4 5 6'));
