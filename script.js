@@ -379,3 +379,12 @@ function getMiddle(s) {
 }
 
 console.log(getMiddle('Gehad'));
+
+
+// Mumbling 
+
+function accum(s) {
+	// your code
+    return s.toLowerCase().split('').map((letter , i) => letter.toUpperCase() + letter.repeat(i)).join('-')
+}
+console.log(accum('Gehad'));
