@@ -388,3 +388,12 @@ function accum(s) {
     return s.toLowerCase().split('').map((letter , i) => letter.toUpperCase() + letter.repeat(i)).join('-')
 }
 console.log(accum('Gehad'));
+
+
+// You're a square!
+
+var isSquare = function(n){
+    return Number.isInteger(Math.sqrt(n));
+}
+
+console.log(isSquare(26));
