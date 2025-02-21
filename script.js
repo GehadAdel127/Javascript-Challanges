@@ -356,8 +356,8 @@ console.log(nbDig(10, 1));
 
 
 //  square digits
-function squareDigits(num){
-    return Number(num.toString().split('').map((n) => Math.pow(n , 2)).join(''))
+function squareDigits(num) {
+    return Number(num.toString().split('').map((n) => Math.pow(n, 2)).join(''))
 }
 
 console.log(squareDigits(127));
@@ -365,7 +365,17 @@ console.log(squareDigits(127));
 
 
 // Descending Order
-function descendingOrder(n){
+function descendingOrder(n) {
     //...
-    return Number(n.toString().split("").sort((a , b) => b - a).join(""))
+    return Number(n.toString().split("").sort((a, b) => b - a).join(""))
 }
+
+
+// Get the Middle Character
+
+function getMiddle(s) {
+    //Code goes here!
+    return s.length % 2 === 0 ? s[(s.length / 2) - 1] + s[s.length / 2] : s[Math.ceil(s.length / 2) - 1];
+}
+
+console.log(getMiddle('Gehad'));
