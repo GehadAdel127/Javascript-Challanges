@@ -381,7 +381,7 @@ function getMiddle(s) {
 console.log(getMiddle('Gehad'));
 
 
-// Mumbling 
+// Mumbling
 
 function accum(s) {
 	// your code
