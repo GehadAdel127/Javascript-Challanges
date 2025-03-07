@@ -407,3 +407,11 @@ function filter_list(l) {
 }
 
 console.log([1,2,'g']);
+
+
+// Isograms 
+
+function isIsogram(str){
+    //...
+    return new Set(str.toLowerCase().split('')).size === str.length
+}
