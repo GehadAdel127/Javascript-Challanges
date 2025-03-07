@@ -423,3 +423,5 @@ function XO(str) {
     const oCount = (str.toLowerCase().match(/o/g) || []).length;
     return xCount === oCount;
 }
+
+console.log(XO('xxoo'));
