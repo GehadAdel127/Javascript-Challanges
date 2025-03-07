@@ -416,3 +416,10 @@ function isIsogram(str){
     return new Set(str.toLowerCase().split('')).size === str.length
 }
 
+// Exes and Ohs
+
+function XO(str) {
+    const xCount = (str.toLowerCase().match(/x/g) || []).length;
+    const oCount = (str.toLowerCase().match(/o/g) || []).length;
+    return xCount === oCount;
+}
