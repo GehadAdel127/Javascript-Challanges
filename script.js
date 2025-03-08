@@ -384,15 +384,15 @@ console.log(getMiddle('Gehad'));
 // Mumbling
 
 function accum(s) {
-	// your code
-    return s.toLowerCase().split('').map((letter , i) => letter.toUpperCase() + letter.repeat(i)).join('-')
+    // your code
+    return s.toLowerCase().split('').map((letter, i) => letter.toUpperCase() + letter.repeat(i)).join('-')
 }
 console.log(accum('Gehad'));
 
 
 // You're a square!
 
-var isSquare = function(n){
+var isSquare = function (n) {
     return Number.isInteger(Math.sqrt(n));
 }
 
@@ -403,15 +403,15 @@ console.log(isSquare(26));
 
 function filter_list(l) {
     // Return a new array with the strings filtered out
-    return l.filter((element) => typeof(element) !== 'string')
+    return l.filter((element) => typeof (element) !== 'string')
 }
 
-console.log([1,2,'g']);
+console.log([1, 2, 'g']);
 
 
 // Isograms
 
-function isIsogram(str){
+function isIsogram(str) {
     //...
     return new Set(str.toLowerCase().split('')).size === str.length
 }
@@ -430,8 +430,35 @@ console.log(XO('xxoo'));
 
 // Shortest Word
 
-function findShort(s){
+function findShort(s) {
     return Math.min(...s.split(' ').map((word) => word.length))
 }
 
 console.log(findShort('bitcoin take over the world maybe who knows perhaps'));
+
+
+// Jaden Casing Strings
+
+
+/*
+We want to be able to call 'toJadenCase()' directly on a string like so:
+'most trees are blue'.toJadenCase(); // returns 'Most Trees Are Blue'
+For that, we need to add a method to the String prototype:
+*/
+
+Object.defineProperty(
+    String.prototype,
+    'toJadenCase',
+    {
+        value:
+            function toJadenCase() {
+                return this.split(' ')
+                    .map((word) => word[0].toUpperCase() + word.substring(1))
+                    .join(' ');
+            }
+    }
+);
+
+console.log(toJadenCase('most trees are blue", "Most Trees Are Blue'));
+
+
