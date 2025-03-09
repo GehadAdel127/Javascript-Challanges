@@ -473,6 +473,6 @@ function oddOrEven(array) {
 console.log(oddOrEven([0, 1, 5]));
 
 
-// 
+//
 
-// 
+//
