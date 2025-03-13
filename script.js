@@ -462,12 +462,3 @@ Object.defineProperty(
 console.log(toJadenCase('most trees are blue", "Most Trees Are Blue'));
 
 
-// Odd or Even
-function oddOrEven(array) {
-    //enter code here
-    if(!array.length) return 'even'
-    const sum = array.reduce((accu , current) => accu + current)
-    return sum % 2 === 0 ? 'even' : 'odd'
-}
-
-console.log(oddOrEven([0, 1, 5]));
