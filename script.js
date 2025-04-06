@@ -483,3 +483,5 @@ function dontGiveMeFive(start, end) {
     }
     return count
 }
+
+console.log(dontGiveMeFive(4 , 17));
