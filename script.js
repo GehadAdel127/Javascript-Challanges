@@ -465,9 +465,21 @@ console.log(toJadenCase('most trees are blue", "Most Trees Are Blue'));
 // Odd or Even
 function oddOrEven(array) {
     //enter code here
-    if(!array.length) return 'even'
-    const sum = array.reduce((accu , current) => accu + current)
+    if (!array.length) return 'even'
+    const sum = array.reduce((accu, current) => accu + current)
     return sum % 2 === 0 ? 'even' : 'odd'
 }
 
 console.log(oddOrEven([0, 1, 5]));
+
+// Don't give me five
+
+function dontGiveMeFive(start, end) {
+    let count = 0;
+    for (let i = start; i <= end; i++) {
+        if (!String(i).includes("5")) {
+            count++
+        }
+    }
+    return count
+}
